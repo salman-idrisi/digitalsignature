@@ -21,6 +21,7 @@ jobs:
       - name: Build with .NET
         shell: cmd
         run: |
+          cd DigitalSignature
           dotnet build --configuration Release
       
       - name: Publish .NET
