@@ -14,17 +14,15 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup .Net
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Build with .NET
-        shell: cmd
         run: |
           dotnet build --configuration Release
       
       - name: Publish .NET
-        shell: cmd
         run: |
           dotnet publish -c Release -o .\myapp
 
