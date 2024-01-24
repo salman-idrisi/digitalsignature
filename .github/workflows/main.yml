@@ -35,10 +35,3 @@ jobs:
         run: |
           dotnet publish -c Release -o .\myapp
 
-      - name: Deploy to IIS
-        shell: cmd
-        run: |
-          iisreset /stop
-          xcopy /s /y .\myapp\* C:\www\digitalsignature_app
-          iisreset /start
-          
